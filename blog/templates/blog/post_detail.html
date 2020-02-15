@@ -13,8 +13,12 @@
     </script>
 </head>
 <body>
-    <div id="content">
 
+    <a href="{% url 'post_delete' post.id %}">
+        <button>DELETE</button>
+    </a>
+    <div id="content">
+        <a href="{% url 'post_update' post.id %}"> <button>UPDATE</button> </a>
         <h1>{{object.title}}</h1>
         <div>
             <p>Description: {{ object.description }} </p>

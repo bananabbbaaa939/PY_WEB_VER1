@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content %}
+    <title>Register Done</title>
+    <style>
+        img {
+        display:block;
+        width: 300px;
+        height: 400px;
+        margin:0 auto;
+        }
+        div {
+        text-align: center;
+        margin:0 auto;
+
+        }
+        #h1 {
+        display:block;
+
+        color: dark cyan;
+        }
+        a {
+        display:block;
+
+
+        color: dark cyan;
+        font-size: 50px;
+        }
+        h1 {
+        text-align: center;
+        }
+    </style>
+
+
+<img src="http://monthly.chosun.com/up_fd/Mdaily/2017-09/bimg_thumb/2017042000056_0.jpg">
+<h1 id="h1">Sign Up Completes</h1>
+<div>
+<a href="{% url 'index' %}">메인 페이지 이동</a>
+<a href="{% url 'login' %}">로그인 페이지 이동</a>
+</div>
+{% endblock content %}

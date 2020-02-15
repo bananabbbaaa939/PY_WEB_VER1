@@ -20,6 +20,11 @@
     p {
         color:red;
     }
+    a{
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    }
     </style>
 
 </head>
@@ -30,10 +35,17 @@
             <p> {{ post.title }} </p>
             <a href="{% url 'blog_detail' post.id %}"><img src="{{ post.image.url }}"></a>
             <p> {{ post.description }} </p>
-            <li>Create Date: {{ post.create_date }} </li>
+            <li>Create Date: {ost.{ pcreate_date }} </li>
             <li>Modify Date: {{ post.modify_date }} </li>
         {% endfor %}
 
+
+
+    </div>
+    <div id="create_button">
+        <a href="{% url 'blog_create' %}">
+            <button>CREATE</button>
+        </a>
     </div>
 </body>
 </html>
